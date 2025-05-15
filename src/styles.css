@@ -1,0 +1,163 @@
+body {
+  background-color: #454545;
+  margin: 0 auto;
+  width: 90vw;
+  font-family: arial;
+}
+
+header {
+ text-align: center;
+  margin: 20px;
+  font-size: 52px;
+  color: #ff7800;
+  font-weight: 900;
+}
+
+h2 {
+  color: white;
+  margin-left: 4vw;
+}
+
+header span{
+  color: #ff3d00;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0 20px 0;
+  flex-wrap: wrap;
+}
+
+form input{
+  background-color: lightgray;
+  border: white 2px solid;
+  border-radius: 4px;
+  height: 32px;
+}
+
+form button{
+  background-color: #ff7800;
+  border: 2px white solid;
+  color: white;
+  font-weight: 700;
+  border-radius: 4px;
+  height: 38px;
+}
+
+.task-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.task-item {
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  padding: 16px;
+  margin: 8px;
+  background-color: #777777;
+  transition: transform 0.2s;
+  color: white;
+}
+
+.task-item button {
+  background-color: #ff7800;
+  border: 2px white solid;
+  color: white;
+  font-weight: 700;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.task-item.overdue {
+  border: 2px solid #ff3d00;
+}
+
+.custom-select {
+  position: relative;
+}
+
+.custom-select__control {
+  border: 2px solid white;
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 4px;
+  background-color: lightgray;
+  min-width: 150px;
+}
+
+.custom-select__dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+  z-index: 1000;
+}
+
+.custom-select__option {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.custom-select__option:hover {
+  background-color: #f0f0f0;
+}
+
+.custom-select__option--selected {
+  background-color: #f0f0f0;
+}
+
+.filters-cont {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.filters-cont input {
+  background-color: lightgray;
+  border: white 2px solid;
+  border-radius: 4px;
+  height: 32px;
+}
+
+.task-tag {
+  background-color: orange;
+  color: white;
+  padding: 0 5px 0 5px;
+  border-radius: 4px;
+}
+.tags {
+  display: flex;
+  gap: 10px;
+}
+
+@media (max-width: 768px) {
+  .task-item {
+    display: block;
+    width: 100%;
+  }
+}
+
+@media (min-width: 769px) {
+  .task-item {
+    display: inline-block;
+    width: 40%;
+  }
+}
+
+.error {
+  color: red;
+  text-align: center;
+}
